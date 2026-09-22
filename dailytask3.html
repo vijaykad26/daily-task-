@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-height: 101vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: whitesmoke;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  .calculator {
+    width: 340px;
+    background: black;
+    border-radius: 28px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+
+  .header {
+    background: white;
+    border-radius: 20px;
+    padding: 16px 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  .display {
+    text-align: right;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 0 10px 20px 10px;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .btn {
+    border: none;
+    border-radius: 53%;
+    aspect-ratio: 1 / 1;
+    font-size: 22px;
+    font-weight: 700;
+    color:  greenyellow;
+    background: rgb(58, 58, 58);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn.function {
+    background: #a5a5a5;
+    color: black;
+  }
+
+  .btn.operator {
+    background: orange;
+    color: white;
+  }
+
+  .btn.zero-double {
+    font-size: 19px;
+  }
+
+  .btn:active {
+    filter: brightness(0.87);
+  }
+  .btn:hover{
+    color : rgb(255, 72, 0);
+  }
+</style>
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="header">Welcome to Calculator</div>
+    <div class="display">0</div>
+
+    <div class="buttons">
+      <button class="btn function">AC</button>
+      <button class="btn function">←</button>
+      <button class="btn function">%</button>
+      <button class="btn operator">&divide;</button>
+
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn operator">X</button>
+
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn operator">&minus;</button>
+
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn operator">+</button>
+
+      <button class="btn zero-double">0</button>
+      <button class="btn zero-double">00</button>
+      <button class="btn">.</button>
+      <button class="btn operator">=</button>
+    </div>
+  </div>
+
+</body>
+</html>
